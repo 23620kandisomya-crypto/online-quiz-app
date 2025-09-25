@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+#quiz-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#question-area {
+    margin-bottom: 30px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+@media (min-width: 480px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on wider screens */
+    }
+}
+
+.option-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.option-btn:hover:not(.selected):not(.correct):not(.incorrect) {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.option-btn.selected {
+    background-color: #007bff; /* Blue for selected */
+    border-color: #007bff;
+}
+
+.option-btn.correct {
+    background-color: #28a745; /* Green for correct */
+    border-color: #28a745;
+}
+
+.option-btn.incorrect {
+    background-color: #dc3545; /* Red for incorrect */
+    border-color: #dc3545;
+}
+
+.btn {
+    background-color: #28a745; /* Green */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #6c757d; /* Grey when disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+#result-area p {
+    font-size: 1.3em;
+    margin: 15px 0;
+}
+
+#result-area #feedback {
+    font-style: italic;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hidden {
+    display: none;
+}
