@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Time!</h1>
+        <div id="quiz-header">
+            <span id="timer">Time Left: --:--</span>
+        </div>
+        <div id="question-area">
+            <h2 id="question">Loading question...</h2>
+            <div id="options-container" class="options-grid">
+                <!-- Options will be loaded here by JavaScript -->
+            </div>
+            <button id="next-button" class="btn" disabled>Next Question</button>
+        </div>
+        <div id="result-area" class="hidden">
+            <h2>Quiz Finished!</h2>
+            <p>You scored <span id="score">0</span> out of <span id="total-questions">0</span></p>
+            <p id="feedback"></p>
+            <button id="restart-button" class="btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
